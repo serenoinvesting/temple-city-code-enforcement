@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Enforcement Complaint — Unpermitted Construction at 5636 & 5630 Temple City Blvd</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #1B2838;
+      --slate: #2D3748;
+      --red: #C53030;
+      --red-light: #FED7D7;
+      --gold: #B7791F;
+      --gold-light: #FEFCBF;
+      --blue: #2B6CB0;
+      --blue-light: #EBF8FF;
+      --gray-50: #F7FAFC;
+      --gray-100: #EDF2F7;
+      --gray-200: #E2E8F0;
+      --gray-300: #CBD5E0;
+      --gray-500: #718096;
+      --gray-600: #4A5568;
+      --gray-700: #2D3748;
+      --gray-800: #1A202C;
+      --white: #FFFFFF;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--gray-50);
+      color: var(--gray-700);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .serif { font-family: 'Source Serif 4', Georgia, serif; }
+
+    /* Header */
+    .header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 2rem 0;
+      border-bottom: 4px solid var(--red);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .header h1 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .header .subtitle {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      font-weight: 300;
+    }
+
+    .badge-urgent {
+      display: inline-block;
+      background: var(--red);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    /* Navigation */
+    .nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0.75rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .nav-inner {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.25rem;
+    }
+
+    .nav a {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--gray-500);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover { color: var(--red); }
+
+    /* Sections */
+    section {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    section:last-child { border-bottom: none; }
+
+    h2 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gray-800);
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gray-800);
+      margin-bottom: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    p { margin-bottom: 1rem; }
+
+    /* Alert Box */
+    .alert {
+      background: var(--red-light);
+      border-left: 4px solid var(--red);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .alert-title {
+      font-weight: 700;
+      color: var(--red);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .alert p { margin-bottom: 0; font-size: 0.9rem; color: var(--gray-700); }
+
+    /* Info Box */
+    .info-box {
+      background: var(--blue-light);
+      border-left: 4px solid var(--blue);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .info-box-title {
+      font-weight: 700;
+      color: var(--blue);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .info-box p { margin-bottom: 0; font-size: 0.9rem; }
+
+    /* Property Card */
+    .property-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .property-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+      font-size: 1.1rem;
+    }
+
+    .property-card .meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .meta-item {
+      font-size: 0.85rem;
+    }
+
+    .meta-label {
+      font-weight: 600;
+      color: var(--gray-500);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .meta-value {
+      color: var(--gray-800);
+      font-weight: 500;
+    }
+
+    /* Evidence Table */
+    .evidence-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.85rem;
+    }
+
+    .evidence-table th {
+      background: var(--gray-100);
+      text-align: left;
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--gray-600);
+      border-bottom: 2px solid var(--gray-200);
+    }
+
+    .evidence-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--gray-100);
+      vertical-align: top;
+    }
+
+    .evidence-table tr:hover { background: var(--gray-50); }
+
+    /* Exhibit */
+    .exhibit {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .exhibit-header {
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--gray-700);
+      transition: background 0.2s;
+    }
+
+    .exhibit-header:hover { background: var(--gray-50); }
+
+    .exhibit-header .arrow {
+      transition: transform 0.2s;
+      font-size: 0.7rem;
+      color: var(--gray-400);
+    }
+
+    .exhibit-header.open .arrow { transform: rotate(90deg); }
+
+    .exhibit-body {
+      display: none;
+      padding: 1rem;
+      border-top: 1px solid var(--gray-100);
+    }
+
+    .exhibit-body.open { display: block; }
+
+    .exhibit-body img {
+      max-width: 100%;
+      border: 1px solid var(--gray-200);
+      border-radius: 4px;
+    }
+
+    /* Listing Card */
+    .listing-card {
+      background: var(--gold-light);
+      border: 1px solid #ECC94B;
+      border-radius: 6px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .listing-card .source {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.25rem;
+    }
+
+    .listing-card .quote {
+      font-style: italic;
+      color: var(--gray-700);
+      font-size: 0.9rem;
+    }
+
+    /* Summary Stats */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .stat-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 6px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--red);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-top: 0.5rem;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--navy);
+      color: var(--white);
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header h1 { font-size: 1.4rem; }
+      .nav-inner { gap: 1rem; }
+      .property-card .meta { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <span class="badge-urgent">Code Enforcement Complaint</span>
+      <h1>Unpermitted Construction — 5636 & 5630 Temple City Blvd</h1>
+      <p class="subtitle">Submitted to City of Temple City Code Enforcement Division &middot; Attn: Erik So</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#summary">Summary</a>
+        <a href="#properties">Properties</a>
+        <a href="#evidence-5636">5636 Evidence</a>
+        <a href="#evidence-5630">5630 Evidence</a>
+        <a href="#listings">Listing Proof</a>
+        <a href="#permits">Permit Records</a>
+        <a href="#ownership">Ownership</a>
+        <a href="#photos">Photo Evidence</a>
+        <a href="#exhibits">Exhibits</a>
+        <a href="#request">Requested Action</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Summary -->
+  <section id="summary">
+    <div class="container">
+      <div class="alert">
+        <div class="alert-title">Safety Concern — Multiple Units Occupied</div>
+        <p>Extensive unpermitted construction has been performed at both 5636 and 5630 Temple City Blvd, including full kitchen and bathroom renovations, plumbing replacement, and electrical work — all without building permits. Multiple residential units are currently occupied by tenants living in structures that have never been inspected for code compliance.</p>
+      </div>
+
+      <h2>Complaint Summary</h2>
+      <p>This complaint documents <strong>systematic unpermitted construction</strong> across two multi-unit residential properties on Temple City Blvd. Public records confirm that <strong>5636 Temple City Blvd has zero building permits on file in over 60 years</strong>, despite multiple units having been gut-renovated with new kitchens, bathrooms, plumbing, and finishes. Similarly, <strong>5630 Temple City Blvd has no interior rehabilitation permits</strong> despite online real estate listings advertising "newly remodeled" units with "copper plumbing," "premium quartz countertops," and renovated bathrooms.</p>
+
+      <p>The evidence includes City of Temple City permit records showing no permits, real estate listing screenshots proving renovations were performed, and photographs of the renovated units. The work was performed across multiple units in a pattern that indicates a deliberate strategy to renovate without permits to avoid inspection costs and code compliance requirements.</p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Permits at 5636<br>(60+ Years)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Interior Rehab Permits<br>at 5630</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">4+</div>
+          <div class="stat-label">Units Renovated<br>Without Permits</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">35+</div>
+          <div class="stat-label">Photos Documenting<br>Renovations</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Properties -->
+  <section id="properties">
+    <div class="container">
+      <h2>Subject Properties</h2>
+
+      <div class="property-card">
+        <h3>5636 Temple City Blvd, Temple City, CA</h3>
+        <div class="meta">
+          <div class="meta-item">
+            <div class="meta-label">APN</div>
+            <div class="meta-value">8587-016-004</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Owner of Record</div>
+            <div class="meta-value">Zhu Bin</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Management Company</div>
+            <div class="meta-value">CANDET Properties, Inc.</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Building Permits on File</div>
+            <div class="meta-value" style="color: var(--red); font-weight: 700;">ZERO (60+ Years)</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Units Renovated</div>
+            <div class="meta-value">Unit B, Unit E (confirmed); likely others</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Type of Work</div>
+            <div class="meta-value">Full kitchen remodel, bathroom renovation, plumbing</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="property-card">
+        <h3>5630 Temple City Blvd, Temple City, CA</h3>
+        <div class="meta">
+          <div class="meta-item">
+            <div class="meta-label">APN</div>
+            <div class="meta-value">8588-008-001</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Owner of Record</div>
+            <div class="meta-value">Indeed Investments LLC (Christine Jin, Member)</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Management Company</div>
+            <div class="meta-value">CANDET Properties, Inc.</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Interior Rehab Permits</div>
+            <div class="meta-value" style="color: var(--red); font-weight: 700;">NONE ON FILE</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Units Renovated</div>
+            <div class="meta-value">Unit E, Unit L, Unit N (confirmed)</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Type of Work</div>
+            <div class="meta-value">Kitchen remodel, bathroom renovation, copper plumbing replacement, quartz countertops</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Evidence 5636 -->
+  <section id="evidence-5636">
+    <div class="container">
+      <h2>Evidence — 5636 Temple City Blvd</h2>
+
+      <div class="info-box">
+        <div class="info-box-title">Key Finding</div>
+        <p>The City of Temple City permit database shows <strong>zero building permits</strong> have ever been pulled for 5636 Temple City Blvd. Despite this, multiple units have been completely renovated with new kitchens, bathrooms, flooring, and plumbing — as proven by real estate listing photos and tenant photographs.</p>
+      </div>
+
+      <h3>Unit B — "Newly Remodeled" (No Permit)</h3>
+      <p>A Zillow listing for 5636 Temple City Blvd Unit B advertises the unit as having a "newly remodeled kitchen" with new cabinets, countertops, and appliances. Photographs from the listing show a complete gut renovation of the kitchen and bathroom. No building permit exists for this work.</p>
+
+      <h3>Unit E — Renovated Interior (No Permit)</h3>
+      <p>Unit E was leased in May 2025 and advertised as "newly remodeled." The unit contains new flooring, renovated bathroom, and updated kitchen. The plumbing in this unit has experienced chronic failures consistent with improper installation — the toilet has been non-functional for 11 months due to what appears to be an improperly installed drain line. No building permit exists for the renovation or plumbing work.</p>
+
+      <h3>Implications</h3>
+      <p>With zero permits on file in over 60 years, <strong>none of the following work was ever inspected</strong>:</p>
+      <table class="evidence-table">
+        <thead>
+          <tr>
+            <th>Work Performed</th>
+            <th>Permit Required?</th>
+            <th>Permit Pulled?</th>
+            <th>Safety Risk</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kitchen renovation (cabinets, counters, appliances)</td>
+            <td>Yes — electrical, plumbing</td>
+            <td style="color: var(--red); font-weight: 600;">No</td>
+            <td>Electrical fire, gas leak</td>
+          </tr>
+          <tr>
+            <td>Bathroom renovation (toilet, shower, vanity)</td>
+            <td>Yes — plumbing</td>
+            <td style="color: var(--red); font-weight: 600;">No</td>
+            <td>Sewage backup, water damage</td>
+          </tr>
+          <tr>
+            <td>Plumbing replacement/modification</td>
+            <td>Yes — plumbing</td>
+            <td style="color: var(--red); font-weight: 600;">No</td>
+            <td>Sewage overflow (confirmed)</td>
+          </tr>
+          <tr>
+            <td>HVAC installation (mini-split)</td>
+            <td>Yes — mechanical, electrical</td>
+            <td style="color: var(--red); font-weight: 600;">No</td>
+            <td>Insufficient heating, electrical hazard</td>
+          </tr>
+          <tr>
+            <td>Flooring replacement</td>
+            <td>Depends on scope</td>
+            <td style="color: var(--red); font-weight: 600;">No</td>
+            <td>Subfloor integrity unknown</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Evidence 5630 -->
+  <section id="evidence-5630">
+    <div class="container">
+      <h2>Evidence — 5630 Temple City Blvd</h2>
+
+      <div class="info-box">
+        <div class="info-box-title">Key Finding</div>
+        <p>City of Temple City permit records show <strong>no interior rehabilitation permits</strong> for 5630 Temple City Blvd. However, at least three units (E, L, N) have been completely renovated, as proven by online real estate listings advertising the work.</p>
+      </div>
+
+      <h3>Unit N — "Copper Plumbing" Advertised (No Permit)</h3>
+      <p>A Trulia listing for 5630 Temple City Blvd Unit N specifically advertises <strong>"copper plumbing"</strong> as a feature. Copper plumbing replacement is a major plumbing modification that absolutely requires a building permit and inspection. The listing also shows two fully renovated bathrooms. No plumbing permit exists for this work.</p>
+
+      <h3>Unit E — "Premium Quartz Countertops, Newly Renovated" (No Permit)</h3>
+      <p>A Zillow listing for 5630 Temple City Blvd Unit E advertises <strong>"premium quartz countertops"</strong> and describes the unit as <strong>"newly renovated."</strong> Photos show a complete kitchen and bathroom renovation. No building permit exists for this work.</p>
+
+      <h3>Unit L — Identical Renovation Pattern (No Permit)</h3>
+      <p>Unit L at 5630 Temple City Blvd shows an identical renovation style to Unit E — same materials, same layout modifications, same finishes. This confirms a systematic renovation program across multiple units, all performed without permits.</p>
+
+      <table class="evidence-table">
+        <thead>
+          <tr>
+            <th>Unit</th>
+            <th>Work Advertised</th>
+            <th>Source</th>
+            <th>Permit Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Unit N</td>
+            <td>Copper plumbing replacement, 2 bathroom renovations</td>
+            <td>Trulia listing</td>
+            <td style="color: var(--red); font-weight: 600;">No permit</td>
+          </tr>
+          <tr>
+            <td>Unit E</td>
+            <td>Premium quartz countertops, full kitchen/bath renovation</td>
+            <td>Zillow listing</td>
+            <td style="color: var(--red); font-weight: 600;">No permit</td>
+          </tr>
+          <tr>
+            <td>Unit L</td>
+            <td>Full kitchen/bath renovation (identical to Unit E)</td>
+            <td>Tenant photographs</td>
+            <td style="color: var(--red); font-weight: 600;">No permit</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Listings -->
+  <section id="listings">
+    <div class="container">
+      <h2>Online Listing Evidence</h2>
+      <p>The following real estate listings prove that renovations were performed. These listings were created by the property owners/managers themselves, advertising the unpermitted work as a selling point to attract tenants.</p>
+
+      <div class="listing-card">
+        <div class="source">Zillow — 5636 Temple City Blvd, Unit B</div>
+        <p class="quote">"Newly remodeled kitchen" — Photos show complete gut renovation with new cabinets, countertops, appliances, and flooring. Zero permits on file.</p>
+      </div>
+
+      <div class="listing-card">
+        <div class="source">Trulia — 5630 Temple City Blvd, Unit N</div>
+        <p class="quote">"Copper plumbing" — Explicitly advertises plumbing replacement work. Also shows two fully renovated bathrooms. No plumbing permit on file.</p>
+      </div>
+
+      <div class="listing-card">
+        <div class="source">Zillow — 5630 Temple City Blvd, Unit E</div>
+        <p class="quote">"Premium quartz countertops" / "Newly renovated" — Photos show complete kitchen and bathroom renovation. No interior rehab permit on file.</p>
+      </div>
+
+      <div class="listing-card">
+        <div class="source">Lease Advertisement — 5636 Temple City Blvd, Unit E</div>
+        <p class="quote">"Newly remodeled" — Unit advertised as newly remodeled at time of lease signing (May 2025). Zero permits on file for any work at this address.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Permit Records -->
+  <section id="permits">
+    <div class="container">
+      <h2>City of Temple City Permit Records</h2>
+
+      <p>The following permit searches were conducted through the City of Temple City's public records system. Screenshots of these searches are included as exhibits below.</p>
+
+      <div class="property-card">
+        <h3>5636 Temple City Blvd — Permit Search Results</h3>
+        <p style="margin-top: 0.75rem;"><strong>Result: ZERO permits on file.</strong> No building permits, plumbing permits, electrical permits, or mechanical permits have ever been recorded for this address in the city's database. The property has been standing for over 60 years with no permitted work of any kind — yet multiple units have been fully renovated.</p>
+        <p><em>See Exhibit EX-04 below for screenshot of permit search results.</em></p>
+      </div>
+
+      <div class="property-card">
+        <h3>5630 Temple City Blvd — Permit Search Results</h3>
+        <p style="margin-top: 0.75rem;"><strong>Result: No interior rehabilitation permits.</strong> While some minor permits may exist for exterior work, there are no permits for the extensive interior renovations (kitchen remodels, bathroom renovations, plumbing replacement) that have been performed across multiple units.</p>
+        <p><em>See Exhibit EX-05 below for screenshot of permit search results.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ownership -->
+  <section id="ownership">
+    <div class="container">
+      <h2>Property Ownership & Management</h2>
+
+      <p>Both properties are managed by the same company (CANDET Properties, Inc.) and share connected ownership, indicating a coordinated renovation strategy across both addresses.</p>
+
+      <table class="evidence-table">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>APN</th>
+            <th>Owner</th>
+            <th>Management</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5636 Temple City Blvd</td>
+            <td>8587-016-004</td>
+            <td>Zhu Bin</td>
+            <td>CANDET Properties, Inc.</td>
+          </tr>
+          <tr>
+            <td>5721½ Temple City Blvd</td>
+            <td>8587-016-005</td>
+            <td>Zhu Bin</td>
+            <td>CANDET Properties, Inc.</td>
+          </tr>
+          <tr>
+            <td>5630 Temple City Blvd</td>
+            <td>8588-008-001</td>
+            <td>Indeed Investments LLC (Christine Jin)</td>
+            <td>CANDET Properties, Inc.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Management Company</h3>
+      <table class="evidence-table">
+        <thead>
+          <tr>
+            <th>Entity</th>
+            <th>Role</th>
+            <th>License</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CANDET Properties, Inc.</td>
+            <td>Property Management</td>
+            <td>DRE #01071264</td>
+          </tr>
+          <tr>
+            <td>Tony P.H. Chen</td>
+            <td>Designated Officer</td>
+            <td>DRE Broker #00924710</td>
+          </tr>
+          <tr>
+            <td>Alice Wu</td>
+            <td>Managing Agent (day-to-day operations)</td>
+            <td>No DRE license on file</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Contractor Identified</h3>
+      <table class="evidence-table">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>License</th>
+            <th>Owner</th>
+            <th>Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fair Plumbing Team</td>
+            <td>CSLB #1123770</td>
+            <td>Kevin Pei</td>
+            <td>Connected to 6 companies at same address; performed work at subject properties</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Photo Evidence -->
+  <section id="photos">
+    <div class="container">
+      <h2>Photographic Evidence of Renovations</h2>
+
+      <p>The following photo sets document the renovations performed at both properties. These photos prove that extensive construction work was completed — work that required building permits that were never obtained.</p>
+
+      <div class="property-card">
+        <h3>5636 Unit B — 10 Photos</h3>
+        <p>Shows complete kitchen renovation with new cabinets, countertops, appliances, backsplash, and flooring. Bathroom shows new vanity, toilet, and tile work. All work performed without permits.</p>
+      </div>
+
+      <div class="property-card">
+        <h3>5630 Unit E — 9 Photos</h3>
+        <p>Shows "premium quartz countertops," new kitchen cabinets, renovated bathroom with new tile, vanity, and fixtures. Described as "newly renovated" in listing. No interior rehab permit on file.</p>
+      </div>
+
+      <div class="property-card">
+        <h3>5630 Unit L — 8 Photos</h3>
+        <p>Shows identical renovation style to Unit E — same materials, same layout, same finishes. Proves systematic renovation program across multiple units without permits.</p>
+      </div>
+
+      <div class="property-card">
+        <h3>5630 Unit N — 8 Photos</h3>
+        <p>Shows two fully renovated bathrooms and kitchen. Listing advertises "copper plumbing" — a major plumbing modification requiring permit and inspection. No plumbing permit on file.</p>
+      </div>
+
+      <p style="margin-top: 1.5rem;"><strong>Full photo evidence available at:</strong> <a href="https://drive.google.com/drive/folders/1EOqpiEQZYLrFg8XBSbZ4ujG2NDbZYoCK" target="_blank" rel="noopener">Google Drive Evidence Folder</a></p>
+    </div>
+  </section>
+
+  <!-- Exhibits -->
+  <section id="exhibits">
+    <div class="container">
+      <h2>Supporting Exhibits</h2>
+      <p>Click any exhibit to expand and view the supporting documentation.</p>
+
+      <div class="exhibit">
+        <div class="exhibit-header" onclick="toggleExhibit(this)">
+          <span class="arrow">&#9654;</span>
+          EX-04: Temple City Permits — 5636 Temple City Blvd (ZERO PERMITS)
+        </div>
+        <div class="exhibit-body">
+          <img src="/manus-storage/EX-04_Temple_City_Permits_5636_Temple_City_ZERO_PERMITS_25f0ead3.webp" alt="Temple City Permit Search - 5636 - Zero Results">
+        </div>
+      </div>
+
+      <div class="exhibit">
+        <div class="exhibit-header" onclick="toggleExhibit(this)">
+          <span class="arrow">&#9654;</span>
+          EX-05: Temple City Permits — 5630 Temple City Blvd (No Interior Rehab)
+        </div>
+        <div class="exhibit-body">
+          <img src="/manus-storage/EX-05_Temple_City_Permits_5630_Temple_City_No_Interior_Rehab_37a679bd.webp" alt="Temple City Permit Search - 5630 - No Interior Rehab">
+        </div>
+      </div>
+
+      <div class="exhibit">
+        <div class="exhibit-header" onclick="toggleExhibit(this)">
+          <span class="arrow">&#9654;</span>
+          EX-16: Zillow — 5636 Unit B, "Newly Remodeled Kitchen" (No Permit)
+        </div>
+        <div class="exhibit-body">
+          <img src="/manus-storage/EX-16_Zillow_5636_Temple_City_Unit_B_Remodeled_Kitchen_Photos_187e618d.webp" alt="Zillow listing showing remodeled kitchen at 5636 Unit B">
+        </div>
+      </div>
+
+      <div class="exhibit">
+        <div class="exhibit-header" onclick="toggleExhibit(this)">
+          <span class="arrow">&#9654;</span>
+          EX-15: Trulia — 5630 Unit N, "Copper Plumbing" (No Permit)
+        </div>
+        <div class="exhibit-body">
+          <img src="/manus-storage/EX-15_Trulia_5630_Temple_City_Unit_N_Remodeled_Copper_Plumbing_Listing_a9d3efc0.webp" alt="Trulia listing advertising copper plumbing at 5630 Unit N">
+        </div>
+      </div>
+
+      <div class="exhibit">
+        <div class="exhibit-header" onclick="toggleExhibit(this)">
+          <span class="arrow">&#9654;</span>
+          EX-17: Zillow — 5630 Unit E, "Premium Quartz Countertops" (No Permit)
+        </div>
+        <div class="exhibit-body">
+          <img src="/manus-storage/EX-17_Zillow_5630_Temple_City_Unit_E_Remodeled_Kitchen_Listing_bed87713.webp" alt="Zillow listing showing renovated kitchen at 5630 Unit E">
+        </div>
+      </div>
+
+      <div class="exhibit">
+        <div class="exhibit-header" onclick="toggleExhibit(this)">
+          <span class="arrow">&#9654;</span>
+          EX-01: LA County Assessor — APN 8587-016-004, Zhu Bin (5636 Owner)
+        </div>
+        <div class="exhibit-body">
+          <img src="/manus-storage/EX-01_LA_County_Assessor_APN_8587016004_Zhu_Bin_5717_Temple_City_b876a76f.webp" alt="LA County Assessor record for 5636 Temple City Blvd">
+        </div>
+      </div>
+
+      <div class="exhibit">
+        <div class="exhibit-header" onclick="toggleExhibit(this)">
+          <span class="arrow">&#9654;</span>
+          EX-03: LA County Assessor — APN 8588-008-001, Indeed Investments (5630 Owner)
+        </div>
+        <div class="exhibit-body">
+          <img src="/manus-storage/EX-03_LA_County_Assessor_APN_8588008001_Indeed_Investments_5630_Temple_City_9083a2c3.webp" alt="LA County Assessor record for 5630 Temple City Blvd">
+        </div>
+      </div>
+
+      <div class="exhibit">
+        <div class="exhibit-header" onclick="toggleExhibit(this)">
+          <span class="arrow">&#9654;</span>
+          EX-08: CA Secretary of State — Indeed Investments LLC, Christine Jin
+        </div>
+        <div class="exhibit-body">
+          <img src="/manus-storage/EX-08_CA_SOS_Indeed_Investments_LLC_Christine_Jin_Member_6efac857.webp" alt="CA SOS record for Indeed Investments LLC">
+        </div>
+      </div>
+
+      <div class="exhibit">
+        <div class="exhibit-header" onclick="toggleExhibit(this)">
+          <span class="arrow">&#9654;</span>
+          EX-06: DRE — CANDET Properties Corporate License #01071264
+        </div>
+        <div class="exhibit-body">
+          <img src="/manus-storage/EX-06_DRE_CANDET_Properties_Corporate_License_01071264_d25895cb.webp" alt="DRE license record for CANDET Properties">
+        </div>
+      </div>
+
+      <div class="exhibit">
+        <div class="exhibit-header" onclick="toggleExhibit(this)">
+          <span class="arrow">&#9654;</span>
+          EX-18: DRE — Tony Chen, Designated Officer of CANDET
+        </div>
+        <div class="exhibit-body">
+          <img src="/manus-storage/EX-18_DRE_CANDET_Tony_Chen_Designated_Officer_Confirmed_e9b87b61.webp" alt="DRE record showing Tony Chen as CANDET designated officer">
+        </div>
+      </div>
+
+      <div class="exhibit">
+        <div class="exhibit-header" onclick="toggleExhibit(this)">
+          <span class="arrow">&#9654;</span>
+          EX-22: CSLB — Fair Plumbing Team, License #1123770, Kevin Pei
+        </div>
+        <div class="exhibit-body">
+          <img src="/manus-storage/EX-22_CSLB_Fair_Plumbing_Team_License_1123770_Kevin_Pei_051057d6.webp" alt="CSLB license record for Fair Plumbing Team">
+        </div>
+      </div>
+
+      <div class="exhibit">
+        <div class="exhibit-header" onclick="toggleExhibit(this)">
+          <span class="arrow">&#9654;</span>
+          EX-23: Kevin Pei — CorporationWiki, 6 Companies at Same Address
+        </div>
+        <div class="exhibit-body">
+          <img src="/manus-storage/EX-23_Kevin_Pei_CorporationWiki_6_Companies_Same_Address_2b719fb3.webp" alt="CorporationWiki showing Kevin Pei connected to 6 companies">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Requested Action -->
+  <section id="request">
+    <div class="container">
+      <h2>Requested Action</h2>
+
+      <div class="alert">
+        <div class="alert-title">Request for Inspection</div>
+        <p>We respectfully request that the City of Temple City Code Enforcement Division conduct a physical inspection of both 5636 and 5630 Temple City Blvd to verify the extent of unpermitted construction and assess any safety hazards to current occupants.</p>
+      </div>
+
+      <p>Based on the evidence presented above, we request the following actions:</p>
+
+      <table class="evidence-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Requested Action</th>
+            <th>Basis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Physical inspection of all units at 5636 Temple City Blvd</td>
+            <td>Zero permits on file; confirmed renovations in Units B and E</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Physical inspection of all units at 5630 Temple City Blvd</td>
+            <td>No interior rehab permits; confirmed renovations in Units E, L, and N</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Plumbing inspection — particularly drain lines and copper replacement</td>
+            <td>Listing advertises "copper plumbing"; chronic plumbing failures in Unit E at 5636 suggest improper installation</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Electrical inspection of renovated kitchens</td>
+            <td>New appliances and fixtures installed without electrical permits</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>HVAC/mechanical inspection</td>
+            <td>Mini-split systems installed without mechanical permits</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Require property owners to obtain retroactive permits or restore to original condition</td>
+            <td>California Building Code compliance</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="info-box" style="margin-top: 2rem;">
+        <div class="info-box-title">Contact for Code Enforcement</div>
+        <p><strong>Erik So</strong> — City of Temple City Code Enforcement<br>
+        Email: <a href="mailto:ESO@templecityca.gov">ESO@templecityca.gov</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Anonymous Code Enforcement Complaint &middot; City of Temple City &middot; Submitted May 2026</p>
+      <p style="margin-top: 0.5rem; opacity: 0.6;">This document contains public records and factual observations only.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleExhibit(header) {
+      header.classList.toggle('open');
+      const body = header.nextElementSibling;
+      body.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
